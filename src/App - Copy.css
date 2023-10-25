@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+  font-family: 'Lora', serif;
+}
+
+/* Home Style */
+.heading a{
+  font-family: 'Open Sans', sans-serif;
+}
+.scroll-area svg{fill:#fff !important;}
+
+.connSlider .slick-slide{
+  /* margin:15px; */
+}
+.slick-track
+{
+    display: flex !important;
+}
+.connSlider .slick-slide div, .connSlider .slick-slide img{
+  height: 100%;
+}
+.connSlider .slick-slide img{
+  object-fit: cover;
+  border-radius: 50%;
+  width:250px;
+  height:250px;
+  max-width:unset;
+  margin: auto;
+}
+/* End Home Style */
+
+.imgbg, .heroimgbg, .expbg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('/public/images/hero.jpg');
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  background-position: center center !important;
+  /* clip-path: circle(2500px at center); */
+  opacity: 0;
+  transition: clip-path 0.2s;
+}
+.expbg{
+  background: url('/public/images/experiance-bg.jpg');
+  opacity:1;
+  position: unset;
+  clip-path: circle(2000px at center);
+  transition: clip-path 2s;
+}
+
+.column-area{height:100vh;}
+
+.heading{
+  scale: 1;
+  transition: scale 10s;
+}
+.slideSection{
+  overflow-x: hidden;
+}
+.bg{
+  background: url('/public/images/experiance-bg.jpg');
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  background-position: center center !important;
+  clip-path: circle(100% at center);
+  height: 100vh;
+  transition: 1s;
+}
+.connSlider {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.connSlider.hidden {
+  display: none;
+}
