@@ -37,7 +37,7 @@ function Animate() {
   return (
     <section className="section bg-[#354033] mt-[-2px]">
       <div className="container mx-auto w-[90%] 3xl:w-[39%] 2xl:w-[46%] xl:w-[50%] md:w-[88%]">
-        <div className="flex justify-between column-area">
+        <div className="flex justify-between place-items-center column-area">
           <div className='content'>
             {/* <h2 className=' text-white exp-head fixed top-[25%] opacity-0 transition-[opacity] delay-100'>Ecoworld</h2> */}
             <p className=' text-white text-md md:text-xl text-center md:text-left exp-text-one top-[25%] fixed xl:top-[30%] md:top-[40%] opacity-0 transition-[opacity] ease-in-out delay-100 w-[90%] 2xl:w-[17%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>

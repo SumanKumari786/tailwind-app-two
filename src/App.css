@@ -93,3 +93,28 @@ h1, h2, h3, h4, h5, h6, p, span{
 .connSlider.hidden {
   display: none;
 }
+
+
+/* CONNECTIVITY PAGE STYLE */
+
+/* Banner Section */
+.banner-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url('/public/images/experiance-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center center;
+  clip-path: circle(1500px at center);
+  transition: 1s;
+}
+
+/* Seamless Connectivity Section  */
+.seamSec{
+  clip-path: circle(1500px at center);
+}
+
+/* END OF CONNECTIVITY PAGE STYLE */
