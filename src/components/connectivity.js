@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-function Connectivity() {
+
+const Connectivity = () => {
   {
     const settings = {
       // centerMode: true,
@@ -68,9 +70,11 @@ function Connectivity() {
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
-            <img className='' src="/images/hero.jpg" alt="" />
-            <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
-            <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+            <a href="/connectivity">
+              <img className='' src="/images/hero.jpg" alt="" />
+              <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
+              <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+            </a>
           </div>
           <div className="item">
             <img className='hidden-img' src="/images/experiance-bg.jpg" alt="" />

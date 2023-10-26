@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-function Animate() {
+const Animate = () => {
   const [value1, setValue1] = useState(20);
   const screenWidth = window.innerWidth;
   useEffect(() => {
