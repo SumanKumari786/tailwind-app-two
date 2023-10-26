@@ -4,27 +4,28 @@
   box-sizing: border-box;
 }
 html, body {
-  scroll-behavior: smooth;
-}
-body{
   overflow-x: hidden;
 }
-
+@font-face {
+  font-family: SangBleuKingdomTrial;
+  src: url(/public/fonts/SangBleuKingdomTrial-Medium.otf);
+}
+@font-face {
+  font-family: AvenirLight;
+  src: url(/public/fonts/AvenirLight.ttf);
+}
 h1, h2, h3, h4, h5, h6, p, span{
-  font-family: 'Lora', serif;
+  /* font-family: 'Lora', serif; */
+  font-family: 'SangBleuKingdomTrial';
 }
 
 /* Home Style */
-.heading a{
-  font-family: 'Open Sans', sans-serif;
+.heading a, .exp-text-two, .expContent p, .item p{
+  font-family: 'AvenirLight';
 }
 .scroll-area svg{fill:#fff !important;}
 
-.connSlider .slick-slide{
-  /* margin:15px; */
-}
-.slick-track
-{
+.slick-track{
     display: flex !important;
 }
 .connSlider .slick-slide div, .connSlider .slick-slide img{
@@ -74,7 +75,7 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 .bg{
   background: url('/public/images/experiance-bg.jpg');
-  background-size: cover !important;
+  background-size: cover;
   background-repeat: no-repeat !important;
   background-attachment: fixed;
   background-position: center center !important;
@@ -118,3 +119,12 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 
 /* END OF CONNECTIVITY PAGE STYLE */
+
+/* .hidden-img{opacity:0;} */
+
+@media(max-width:769px){
+  .connSlider .slick-slide img{
+    width: 200px;
+    height: 200px;
+  }
+}

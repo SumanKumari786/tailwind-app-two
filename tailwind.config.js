@@ -5,12 +5,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-
       backgroundColor:{
         darkGreen: '#354033',
       },
       textColor:{
         darkGreen: '#354033',
+      },
+      fontSize:{
+        xl: '45pt',
+        lg: '27pt',
+        md: '24pt',
+        sm: '18pt',
       }
     },
   },

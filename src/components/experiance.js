@@ -12,14 +12,13 @@ function Experiance() {
     const text2 = document.querySelector('.exp-text-two');
     var hT = expSec.offsetTop;
     var sliderHeight = slideSection.offsetTop;
-    var sliderRound;
     if(screenWidth >= 1200){
       sliderHeight = sliderHeight-10;
-      sliderRound = sliderHeight-25;
+      // sliderRound = sliderHeight-25;
     }
     else{
       sliderHeight = sliderHeight-100;
-      sliderRound = sliderHeight-105;
+      // sliderRound = sliderHeight-105;
     }
     // var hH = expSec.offsetHeight;
     // var wH = window.innerHeight || document.documentElement.clientHeight;
@@ -36,29 +35,31 @@ function Experiance() {
     }
     if(wS>=(sliderHeight)){
       connSlider.classList.remove('hidden');
-      expbg.style.clipPath = `circle(${100}px at center 45%)`;
-      // expbg.style.opacity = 0;
-      // expbg.style.clipPath = `circle(${0}px at center center)`;
+      if(screenWidth >= 769){
+        expbg.style.clipPath = `circle(${125.4}px at center 48%)`;
+      }
+      else{
+        expbg.style.clipPath = `circle(${100}px at center 48%)`;
+      }
+      setTimeout(() => {
+        expbg.style.opacity = 0;
+        expbg.style.transition = '2.2s';
+      }, 1500);
     }
     else{
+      expbg.style.opacity = 1;
+      expbg.style.transition = '1s';
       connSlider.classList.add('hidden');
       expbg.style.clipPath = `circle(${100}% at center)`;
-      // expbg.style.opacity = 1;
     }
-    // if(wS>=sliderRound){
-    //   expbg.style.opacity = 0;
-    // }
-    // else{
-    //   expbg.style.opacity = 1;
-    // }
   })
 
   return ( 
-    <section className='expSec bg-[#354033] relative'>
+    <section className='expSec relative'>
       <div className='expbg'>
         <div className='min-h-screen pb-[15%] md:pb-[180px] grid place-content-end expContent text-white text-center'>
             <h2 className='text-4xl md:text-6xl font-[500]'>Experience Ecoworld</h2>
-            <p className='font-[400] w-11/12 lg:w-7/12 mx-auto mt-7 text-md md:text-lg'>
+            <p className='w-11/12 lg:w-7/12 mx-auto mt-7 text-sm'>
             Our placemaking capabilities integrate in a dynamic workplace environment with green open spaces
             and a native landscape to inspire innovation and creativity. The campus seamlessly blends into a
             live-work-play ecosystem with diverse options for connection, collaboration and post-work unwinding.

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -60,36 +60,36 @@ function Connectivity() {
     return (
       <div className="slideSection text-center text-white z-50 min-h-screen relative">
         <div className="bg"></div>
-        <div className="absolute top-[50%] translate-y-[-50%] h-fit" style={{width: "100%"}}>
+        <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}}>
         <Slider className="connSlider" {...settings}>
           <div className="item">
-            <img className='' src="/images/experiance-bg.jpg" />
-            <h4 className="mt-4 text-2xl leading-10">The Campus</h4>
+            <img className='' src="/images/experiance-bg.jpg" alt="" />
+            <h4 className="mt-4 text-sm leading-10">The Campus</h4>
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
-            <img className='' src="/images/hero.jpg" />
-            <h4 className="mt-4 text-2xl leading-10">Connectivity</h4>
+            <img className='' src="/images/hero.jpg" alt="" />
+            <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
-            <img className='' src="/images/experiance-bg.jpg" />
-            <h4 className="mt-4 text-2xl leading-10">Tech Forward</h4>
+            <img className='hidden-img' src="/images/experiance-bg.jpg" alt="" />
+            <h4 className="mt-4 text-sm leading-10">Tech Forward</h4>
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
-            <img className='' src="/images/hero.jpg" />
-            <h4 className="mt-4 text-2xl leading-10">Inspiration</h4>
+            <img className='' src="/images/hero.jpg" alt="" />
+            <h4 className="mt-4 text-sm leading-10">Inspiration</h4>
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
-            <img className='' src="/images/experiance-bg.jpg" />
-            <h4 className="mt-4 text-2xl leading-10">Connectivity</h4>
+            <img className='' src="/images/experiance-bg.jpg" alt="" />
+            <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
-            <img className='' src="/images/hero.jpg" />
-            <h4 className="mt-4 text-2xl leading-10">The Campus</h4>
+            <img className='' src="/images/hero.jpg" alt="" />
+            <h4 className="mt-4 text-sm leading-10">The Campus</h4>
             <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
         </Slider>
