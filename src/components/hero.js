@@ -62,49 +62,69 @@ export default function Hero() {
   let opacity = 0;
   let translateX = 0;
   let translateY = -10;
+// Check if a "hasRun" cookie exists
+const hasRunCookie = document.cookie.split(';').some((item) => item.trim().startsWith('hasRun='));
 
+if (!hasRunCookie) {
   // Function to increment the scale of the text, translate it, and fade it out
   function zoomAndFadeText() {
       var imgbg = document.querySelector('.heroimgbg');
-      var scaleText = document.querySelector('.scaleText');
-      var iText = document.querySelector('.iText');
-      var heading = document.querySelector('.tHead');
-      var animateLetter = document.querySelector('.animateLetter');
-      var text = document.querySelector('.text');
+      // var scaleText = document.querySelector('.scaleText');
+      // var iText = document.querySelector('.iText');
+      // var heading = document.querySelector('.tHead');
+      // var animateLetter = document.querySelector('.animateLetter');
       const textElement = document.getElementById('text');
-      textElement.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+      const letterI = document.getElementById('zoomed-letter-i');
+      const letterIRect = letterI.getBoundingClientRect();
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const targetX = centerX - letterIRect.left - letterIRect.width / 1.5;
+      const targetY = centerY - letterIRect.top - letterIRect.height / 2;
+
+      textElement.style.transform = `scale(${scale}) translate(${targetX}px, ${targetY}px)`;
       // textElement.style.transform = `scale(${scale})`;
       imgbg.style.opacity = opacity;
 
       // Increase the scale and translation by specific amounts
-      scale += 5.5;
-      opacity = opacity + 0.0145;
+      scale += 3;
+      opacity = opacity + 0.02;
       // console.log(opacity);
       // translateX -= 1;
       // translateY -= 5; 
-      if (scale >= 30) {
-        iText.style.opacity = '1';
-        scaleText.style.display = 'none';
-      }
-      else{
-        iText.style.display = '0';
-        scaleText.style.opacity = 'block';
-      }
-      if (scale <= 400) {
-          setTimeout(zoomAndFadeText, 80); // Repeat every 200 milliseconds until the scale reaches 10
+      // if (scale >= 30) {
+      //   iText.style.opacity = '1';
+      //   scaleText.style.display = 'none';
+      // }
+      // else{
+      //   iText.style.display = '0';
+      //   scaleText.style.opacity = 'block';
+      // }
+      
+      if (scale <= 150) {
+          setTimeout(zoomAndFadeText, 70); // Repeat every 200 milliseconds until the scale reaches 10
       } else {
           // Once the scale reaches 10, start fading out
-          setTimeout(() => {
-              textElement.style.display = 'none';
-          }, 1800);
+          textElement.style.opacity = '0';
+          // document.cookie = 'hasRun=true';
       }
   }
 
-  // Add an event listener to call the function with a 3-second delay when the page loads
-  window.addEventListener('load', () => {
+   // Add an event listener to call the function when the page loads
+   window.addEventListener('load', () => {
+    // Start the animation only when the user is in the first section
+    if (window.scrollY < window.innerHeight) {
       setTimeout(zoomAndFadeText, 1200); // Start the animation after a 3-second delay
+    }
   });
-  
+  // Add a scroll event listener to trigger the animation when the user enters the first section
+  window.addEventListener('scroll', function () {
+    if (window.scrollY < window.innerHeight) {
+      if (!hasRunCookie) {
+        zoomAndFadeText();
+      }
+    }
+  });
+}
 
   return (
     <div className="bg-[#354033] z-50 heroSection">
@@ -117,13 +137,10 @@ export default function Hero() {
               </h1>
               <div data-aos="fade-up" data-aos-duration="1500"  data-aos-easing="ease-in-back" data-aos-delay="100">
                 <p className="mt-6 text-xs md:text-sm leading-8 text-white text px-[36px] px-md-[0]">
-                  Ideas don't come out of nowhere, they come from a place. <br></br> A place called inspiration.
+                Ideas don't come out of nowhere, they come from a place. <br/> A place called <span id="zoomed-letter-i" style={{display: 'inline-block'}}>i</span>nspiration.
                   </p>
               </div>
            </div>
-            <p className="mt-6 text-xs md:text-sm leading-8 text-white text px-[36px] px-md-[0] iText opacity-0 ">
-                <span>i</span>
-            </p>
           </div>
           <div className="mt-10 flex items-center justify-center gap-x-6 scroll-area">
             <a className="scroll-text fixed bottom-[10%] z-50 text-sm leading-6 text-[#436d3d]">

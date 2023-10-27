@@ -11,8 +11,10 @@ function Experiance() {
     const heroimgbg = document.querySelector('.heroimgbg');
     const text1 = document.querySelector('.content');
     const text2 = document.querySelector('.exp-text-two');
+    const connImg = document.querySelector('.connImg');
     var hT = expSec.offsetTop;
     var sliderHeight = slideSection.offsetTop;
+    connImg.style.opacity = 0;
     if(screenWidth >= 1200){
       sliderHeight = sliderHeight-10;
       // sliderRound = sliderHeight-25;
@@ -41,6 +43,7 @@ function Experiance() {
       // }, 800);
       setTimeout(() => {
         expbg.style.opacity = 0;
+        connImg.style.opacity = 1;
         expbg.style.transition = '0.5s';
       }, 1500);
     }
@@ -50,6 +53,7 @@ function Experiance() {
       text2.style.display = 'block';
       expContent.style.display = 'grid';
       connSlider.classList.add('hidden');
+      connImg.style.opacity = 0;
       // connSlider.style.opacity = 0;
       expbg.style.opacity = 1;
       expbg.style.transition = '1s';

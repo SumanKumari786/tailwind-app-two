@@ -75,9 +75,9 @@ const Connectivity = () => {
             <h4 className="mt-4 text-sm leading-10">Tech Forward</h4>
             <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item">
+          <div className="item" data-aos="fade-up" data-aos-duration="1000" >
             <a href="/connectivity">
-              <img className='' src="/images/connectivity.png" alt="" />
+              <img className='connImg' src="/images/connectivity.png" alt="" />
               <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
               <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
             </a>

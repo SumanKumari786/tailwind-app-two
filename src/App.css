@@ -6,6 +6,7 @@
 html, body {
   overflow-x: hidden;
 }
+.contain{overflow: hidden;}
 @font-face {
   font-family: SangBleuKingdomTrial;
   src: url(/public/fonts/SangBleuKingdomTrial-Medium.otf);
@@ -87,13 +88,13 @@ h1, h2, h3, h4, h5, h6, p, span{
   animation-name: fadeIn;
   animation-duration: 5s;
 }
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 .connSlider.hidden {
   display: none;
-}
+} */
 
 .item{
   border:none !important;
