@@ -6,7 +6,8 @@ function Experiance() {
     const expSec = document.querySelector('.expSec');
     const connSlider= document.querySelector('.connSlider');
     const slideSection = document.querySelector('.slideSection');
-    const expbg = document.querySelector('.bg');
+    const expbg = document.querySelector('.expbg');
+    const expContent = document.querySelector('.expContent');
     const heroimgbg = document.querySelector('.heroimgbg');
     const text1 = document.querySelector('.content');
     const text2 = document.querySelector('.exp-text-two');
@@ -24,34 +25,56 @@ function Experiance() {
     // var wH = window.innerHeight || document.documentElement.clientHeight;
     var wS = window.scrollY;
     if(wS>= hT){
-      heroimgbg.style.display = 'none';
-      text1.style.display = 'none';
-      text2.style.display = 'none';
+      // setTimeout(() => {
+        heroimgbg.style.display = 'none';
+        text1.style.display = 'none';
+        text2.style.display = 'none';
+        expContent.style.display = 'none';
+        connSlider.style.opacity = 1;
+        connSlider.classList.remove('hidden');
+        if(screenWidth >= 769){
+          expbg.style.clipPath = `circle(${125.6}px at center center)`;
+        }
+        else{
+          expbg.style.clipPath = `circle(${100}px at center 47.8%)`;
+        }
+      // }, 800);
+      setTimeout(() => {
+        expbg.style.opacity = 0;
+        expbg.style.transition = '0.5s';
+      }, 1500);
     }
     else{
       heroimgbg.style.display = 'block';
       text1.style.display = 'block';
       text2.style.display = 'block';
-    }
-    if(wS>=(sliderHeight)){
-      connSlider.classList.remove('hidden');
-      if(screenWidth >= 769){
-        expbg.style.clipPath = `circle(${125.4}px at center 48%)`;
-      }
-      else{
-        expbg.style.clipPath = `circle(${100}px at center 48%)`;
-      }
-      setTimeout(() => {
-        expbg.style.opacity = 0;
-        expbg.style.transition = '2.2s';
-      }, 1500);
-    }
-    else{
+      expContent.style.display = 'grid';
+      connSlider.classList.add('hidden');
+      // connSlider.style.opacity = 0;
       expbg.style.opacity = 1;
       expbg.style.transition = '1s';
-      connSlider.classList.add('hidden');
-      expbg.style.clipPath = `circle(${100}% at center)`;
+      expbg.style.clipPath = `circle(${100}% at center center)`;
     }
+
+    // if(wS>=(sliderHeight)){
+    //   connSlider.classList.remove('hidden');
+    //   if(screenWidth >= 769){
+    //     expbg.style.clipPath = `circle(${125.4}px at center 48%)`;
+    //   }
+    //   else{
+    //     expbg.style.clipPath = `circle(${100}px at center 48%)`;
+    //   }
+    //   setTimeout(() => {
+    //     expbg.style.opacity = 0;
+    //     expbg.style.transition = '2.2s';
+    //   }, 1500);
+    // }
+    // else{
+    //   expbg.style.opacity = 1;
+    //   expbg.style.transition = '1s';
+    //   connSlider.classList.add('hidden');
+    //   expbg.style.clipPath = `circle(${100}% at center)`;
+    // }
   })
 
   return ( 
@@ -59,7 +82,7 @@ function Experiance() {
       <div className='expbg'>
         <div className='min-h-screen pb-[15%] md:pb-[180px] grid place-content-end expContent text-white text-center'>
             <h2 className='text-4xl md:text-6xl font-[500]'>Experience Ecoworld</h2>
-            <p className='w-11/12 lg:w-7/12 mx-auto mt-7 text-sm'>
+            <p className='w-11/12 lg:w-7/12 mx-auto mt-7 text-xs md:text-sm'>
             Our placemaking capabilities integrate in a dynamic workplace environment with green open spaces
             and a native landscape to inspire innovation and creativity. The campus seamlessly blends into a
             live-work-play ecosystem with diverse options for connection, collaboration and post-work unwinding.

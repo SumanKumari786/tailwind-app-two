@@ -11,18 +11,24 @@ const Animate = () => {
       const text2 = document.querySelector('.exp-text-two');
       const value = window.scrollY;
       var circleEnd;
-      // console.log(value); 
-      if(screenWidth>767){
-        circleEnd = 2300;
+      console.log(value); 
+      if(screenWidth>=1920){
+        circleEnd = 1880;
+      }
+      else if((screenWidth<1920) && (screenWidth>=1680)){
+        circleEnd = 1900;
+      }
+       else if((screenWidth<1680) && (screenWidth>=767)){
+        circleEnd = 1900;
       }
       else if((screenWidth<767) && (screenWidth>321)){
-        circleEnd = 2400;
+        circleEnd = 1995;
       }
       else{
         circleEnd = 2438;
       }
       if (value <= circleEnd) {
-        const newValue1 = 2500 - value;
+        const newValue1 = 2100 - value;
         text1.style.opacity = '0';
         text2.style.opacity = '0';
         setValue1(newValue1);
@@ -34,10 +40,10 @@ const Animate = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', handleScroll);
     };
   }, [value1]);
   return (
@@ -46,12 +52,12 @@ const Animate = () => {
         <div className="flex justify-between place-items-center column-area">
           <div className='content'>
             {/* <h2 className=' text-white exp-head fixed top-[25%] opacity-0 transition-[opacity] delay-100'>Ecoworld</h2> */}
-            <p className=' text-white text-sm text-center md:text-left exp-text-one fixed top-[25%] 2xl:top-[35%] xl:top-[30%] md:top-[40%] opacity-0 transition-[opacity] ease-in-out delay-100 w-[90%] 2xl:w-[18%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
+            <p className=' text-white text-xs md:text-sm text-center md:text-left exp-text-one fixed top-[25%] 2xl:top-[35%] xl:top-[30%] md:top-[40%] opacity-0 transition-[opacity] ease-in-out delay-100 w-[90%] 2xl:w-[18%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
             Creating a world-class workplace experience, that continues to inspire you.
             </p>
           </div>
           <div className='content self-center'>
-            <p className=' text-white text-sm text-center md:text-left ms-auto exp-text-two fixed top-[68%] xl:top-[50%] md:top-[55%] right-[2%] 2xl:right-[19%] xl:right-[9%]  md:right-[2%] opacity-0 transition-[opacity] ease-in-out delay-100 2xl:w-[18%] w-[90%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
+            <p className=' text-white text-xs md:text-sm text-center md:text-left ms-auto exp-text-two fixed top-[68%] xl:top-[50%] md:top-[55%] right-[2%] 2xl:right-[19%] xl:right-[9%]  md:right-[2%] opacity-0 transition-[opacity] ease-in-out delay-100 2xl:w-[18%] w-[90%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
                  100% recycling and resume of water 85% occuupied spaces have views of the outdoors.
             </p>
           </div>

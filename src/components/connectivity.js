@@ -4,7 +4,8 @@ import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Connectivity = () => {
   {
     const settings = {
@@ -60,41 +61,41 @@ const Connectivity = () => {
       }
     });
     return (
-      <div className="slideSection text-center text-white z-50 min-h-screen relative">
-        <div className="bg"></div>
+      <div className="slideSection text-center text-white z-50 min-h-screen relative mt-[-100vh]">
+        {/* <div className="bg"></div> */}
         <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}}>
-        <Slider className="connSlider" {...settings}>
-          <div className="item">
-            <img className='' src="/images/experiance-bg.jpg" alt="" />
+        <Slider className="connSlider lg:pt-6" {...settings}>
+          <div className="item" data-aos="fade-right" data-aos-duration="1000" >
+            <img className='' src="/images/campus.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">The Campus</h4>
-            <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+            <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
+          </div>
+          <div className="item" data-aos="fade-right" data-aos-duration="1000" >
+            <img className='hidden-img' src="/images/tech.png" alt="" />
+            <h4 className="mt-4 text-sm leading-10">Tech Forward</h4>
+            <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
           <div className="item">
             <a href="/connectivity">
-              <img className='' src="/images/hero.jpg" alt="" />
+              <img className='' src="/images/connectivity.png" alt="" />
               <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
-              <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+              <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
             </a>
           </div>
-          <div className="item">
-            <img className='hidden-img' src="/images/experiance-bg.jpg" alt="" />
-            <h4 className="mt-4 text-sm leading-10">Tech Forward</h4>
-            <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
-          </div>
-          <div className="item">
-            <img className='' src="/images/hero.jpg" alt="" />
+          <div className="item" data-aos="fade-left" data-aos-duration="1000" >
+            <img className='' src="/images/inspiration.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Inspiration</h4>
-            <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+            <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item">
-            <img className='' src="/images/experiance-bg.jpg" alt="" />
-            <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
-            <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+          <div className="item" data-aos="fade-left" data-aos-duration="1000" >
+            <img className='' src="/images/wellness.png" alt="" />
+            <h4 className="mt-4 text-sm leading-10">Wellness</h4>
+            <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item">
+          <div className="item" data-aos="fade-left" data-aos-duration="1000" >
             <img className='' src="/images/hero.jpg" alt="" />
             <h4 className="mt-4 text-sm leading-10">The Campus</h4>
-            <p className="px-2">Lorem Ipsum is simply dummy text of the printing</p>
+            <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
         </Slider>
         </div>

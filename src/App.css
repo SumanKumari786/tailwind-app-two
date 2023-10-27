@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 .connSlider {
   animation-name: fadeIn;
-  animation-duration: 16s;
+  animation-duration: 5s;
 }
 @keyframes fadeIn {
   from {opacity: 0;}
@@ -95,7 +95,10 @@ h1, h2, h3, h4, h5, h6, p, span{
   display: none;
 }
 
-
+.item{
+  border:none !important;
+  outline: none !important;
+}
 /* CONNECTIVITY PAGE STYLE */
 
 /* Banner Section */
@@ -127,4 +130,9 @@ h1, h2, h3, h4, h5, h6, p, span{
     width: 200px;
     height: 200px;
   }
+}
+
+.zoomed-text {
+  transform: scale(1) translate(0, 0);
+  transition: transform 1s, opacity 2s;
 }

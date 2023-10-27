@@ -9,14 +9,14 @@ const Banner = () => {
         const oppTextTwo = document.querySelector('.oppTextTwo');
         const seamSec = document.querySelector('.seamSec');
         var wS = window.scrollY;
-        var circle = 1500 - wS;
+        var circle = 1150 - wS;
         var seamTop = seamSec.offsetHeight;
         var hT = bannerBg.offsetHeight;
         console.log(wS, hT, seamTop);
-        if(wS<=1300){
+        if(wS<=900){
             bannerBg.style.clipPath = `circle(${circle}px at center)`;
         }
-        if(wS>=(hT+680)){
+        if(wS>=(hT+180)){
             oppTextOne.style.opacity = 1;
             oppTextTwo.style.opacity = 1;
         }
@@ -41,7 +41,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="mt-10 flex items-center justify-center gap-x-6 scroll-area">
-                    <a href="#" className="scroll-text fixed bottom-[10%] z-50 font-[600] text-md md:text-lg leading-6 text-[#436d3d]">
+                    <a className="scroll-text fixed bottom-[10%] z-50 text-sm leading-6 text-[#436d3d]">
                     Keep Scrolling 
                     </a>
                     <svg className='scroll-icon fixed bottom-[6%] z-50' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z"/></svg>

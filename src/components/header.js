@@ -15,12 +15,12 @@ export default function Header(){
           <div className="flex lg:flex-1">
             <a className="-m-1.5 p-1.5">
               <span className="sr-only">Ecoworld</span>
-              <span className='text-white uppercase tracking-[0.35em] font-[500]'>Ecoworld</span>
-              {/* <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              {/* <span className='text-white uppercase tracking-[0.35em] font-[500]'>Ecoworld</span> */}
+              <img
+                className="h-7 w-auto"
+                src="/images/logo.png"
                 alt=""
-              /> */}
+              />
             </a>
           </div>
           <div className="flex">
