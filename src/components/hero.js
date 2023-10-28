@@ -90,7 +90,7 @@ export default function Hero() {
             document.cookie = 'hasRun=true';
         }
     }
-    setTimeout(zoomAndFadeText, 1200);
+    setTimeout(zoomAndFadeText, 3500);
   }
 
   return (
