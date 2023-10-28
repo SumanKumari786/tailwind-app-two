@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 // Import css files
@@ -7,15 +7,17 @@ import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Connectivity = () => {
+  const [connImgVisible, setConnImgVisible] = useState(false);
   {
     const settings = {
       // centerMode: true,
       dots: false,
       prevArrow: false,
       nextArrow: false,
-      infinite: true,
+      infinite: false,
       slidesToShow: 5,
       slidesToScroll: 1,
+      draggable: false,
       autoplay: false,
       speed: 2000,
       autoplaySpeed: 4000,
@@ -60,39 +62,50 @@ const Connectivity = () => {
         scrollIcon.classList.add('fixed');
       }
     });
+
+    function handleClick() {
+      setConnImgVisible(true);
+      var expbg = document.querySelector('.expbg');
+      var connImg = document.querySelector('#connImg');
+      if (connImg.style.opacity === "0" || connImg.style.opacity === "") {
+        expbg.style.opacity = 0;
+        connImg.style.opacity = 1;
+      }
+    }
+
     return (
       <div className="slideSection text-center text-white z-50 min-h-screen relative mt-[-100vh]">
         {/* <div className="bg"></div> */}
-        <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}}>
+        <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}} onClick={handleClick}>
         <Slider className="connSlider lg:pt-6" {...settings}>
-          <div className="item" data-aos="fade-right" data-aos-duration="1000" >
+          <div className="item" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="280">
             <img className='' src="/images/campus.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">The Campus</h4>
             <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item" data-aos="fade-right" data-aos-duration="1000" >
+          <div className="item" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="280">
             <img className='hidden-img' src="/images/tech.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Tech Forward</h4>
             <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item" data-aos="fade-up" data-aos-duration="1000" >
+          <div className="item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="280">
             <a href="/connectivity">
-              <img className='connImg' src="/images/connectivity.png" alt="" />
+              <img id='connImg' className='connImg opacity-[0]' src="/images/connectivity.png" alt="" />
               <h4 className="mt-4 text-sm leading-10">Connectivity</h4>
               <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
             </a>
           </div>
-          <div className="item" data-aos="fade-left" data-aos-duration="1000" >
+          <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
             <img className='' src="/images/inspiration.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Inspiration</h4>
             <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item" data-aos="fade-left" data-aos-duration="1000" >
+          <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
             <img className='' src="/images/wellness.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Wellness</h4>
             <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>
           </div>
-          <div className="item" data-aos="fade-left" data-aos-duration="1000" >
+          <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
             <img className='' src="/images/hero.jpg" alt="" />
             <h4 className="mt-4 text-sm leading-10">The Campus</h4>
             <p className="px-2 2xl:px-6">Lorem Ipsum is simply dummy text of the printing</p>

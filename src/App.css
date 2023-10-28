@@ -54,11 +54,11 @@ h1, h2, h3, h4, h5, h6, p, span{
   background-attachment: fixed;
   background-position: center center !important;
   /* clip-path: circle(2500px at center); */
-  opacity: 0;
+  /* opacity: 0; */
   transition: clip-path 0.2s;
 }
 .expbg{
-  background: url('/public/images/experiance-bg.jpg');
+  background: url('/public/images/exp.jpg');
   opacity:1;
   position: unset;
   clip-path: circle(2000px at center);
@@ -88,13 +88,13 @@ h1, h2, h3, h4, h5, h6, p, span{
   animation-name: fadeIn;
   animation-duration: 5s;
 }
-/* @keyframes fadeIn {
+@keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 .connSlider.hidden {
   display: none;
-} */
+}
 
 .item{
   border:none !important;

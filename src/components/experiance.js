@@ -15,6 +15,9 @@ function Experiance() {
     var hT = expSec.offsetTop;
     var sliderHeight = slideSection.offsetTop;
     connImg.style.opacity = 0;
+    // if(screenWidth >= 1680){
+    //   hT=hT-120;
+    // }
     if(screenWidth >= 1200){
       sliderHeight = sliderHeight-10;
       // sliderRound = sliderHeight-25;
@@ -41,11 +44,11 @@ function Experiance() {
           expbg.style.clipPath = `circle(${100}px at center 47.8%)`;
         }
       // }, 800);
-      setTimeout(() => {
-        expbg.style.opacity = 0;
-        connImg.style.opacity = 1;
-        expbg.style.transition = '0.5s';
-      }, 1500);
+      // setTimeout(() => {
+      //   expbg.style.opacity = 0;
+      //   connImg.style.opacity = 1;
+      //   expbg.style.transition = '0s';
+      // }, 1500);
     }
     else{
       heroimgbg.style.display = 'block';

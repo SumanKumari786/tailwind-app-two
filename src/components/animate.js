@@ -2,50 +2,50 @@ import React, { useEffect, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Animate = () => {
-  const [value1, setValue1] = useState(20);
-  const screenWidth = window.innerWidth;
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroimgbg = document.querySelector('.heroimgbg');
-      const text1 = document.querySelector('.exp-text-one');
-      const text2 = document.querySelector('.exp-text-two');
-      const value = window.scrollY;
-      var circleEnd;
-      console.log(value); 
-      if(screenWidth>=1920){
-        circleEnd = 1880;
-      }
-      else if((screenWidth<1920) && (screenWidth>=1680)){
-        circleEnd = 1900;
-      }
-       else if((screenWidth<1680) && (screenWidth>=767)){
-        circleEnd = 1900;
-      }
-      else if((screenWidth<767) && (screenWidth>321)){
-        circleEnd = 1995;
-      }
-      else{
-        circleEnd = 2438;
-      }
-      if (value <= circleEnd) {
-        const newValue1 = 2100 - value;
-        text1.style.opacity = '0';
-        text2.style.opacity = '0';
-        setValue1(newValue1);
-        heroimgbg.style.clipPath = `circle(${newValue1}px at center)`;
-      }
-      else {
-        text1.style.opacity = '1';
-        text2.style.opacity = '0.9';
-      }
-    };
+  // const [value1, setValue1] = useState(20);
+  // const screenWidth = window.innerWidth;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const heroimgbg = document.querySelector('.heroimgbg');
+  //     const text1 = document.querySelector('.exp-text-one');
+  //     const text2 = document.querySelector('.exp-text-two');
+  //     const value = window.scrollY;
+  //     var circleEnd;
+  //     console.log(value); 
+  //     if(screenWidth>=1920){
+  //       circleEnd = 1880;
+  //     }
+  //     else if((screenWidth<1920) && (screenWidth>=1680)){
+  //       circleEnd = 1900;
+  //     }
+  //      else if((screenWidth<1680) && (screenWidth>=767)){
+  //       circleEnd = 1900;
+  //     }
+  //     else if((screenWidth<767) && (screenWidth>321)){
+  //       circleEnd = 1995;
+  //     }
+  //     else{
+  //       circleEnd = 2438;
+  //     }
+  //     if (value <= circleEnd) {
+  //       const newValue1 = 2100 - value;
+  //       text1.style.opacity = '0';
+  //       text2.style.opacity = '0';
+  //       setValue1(newValue1);
+  //       heroimgbg.style.clipPath = `circle(${newValue1}px at center)`;
+  //     }
+  //     else {
+  //       text1.style.opacity = '1';
+  //       text2.style.opacity = '0.9';
+  //     }
+  //   };
 
-    window.addEventListener('load', handleScroll);
+  //   window.addEventListener('load', handleScroll);
 
-    return () => {
-      window.removeEventListener('load', handleScroll);
-    };
-  }, [value1]);
+  //   return () => {
+  //     window.removeEventListener('load', handleScroll);
+  //   };
+  // }, [value1]);
   return (
     <section className="section bg-[#354033] mt-[-2px]">
       <div className="container mx-auto w-[90%] 3xl:w-[39%] 2xl:w-[46%] xl:w-[50%] md:w-[88%]">
@@ -63,8 +63,8 @@ const Animate = () => {
           </div>
         </div>
         <div className='min-h-screen'></div>
-        <div className='min-h-screen'></div>
-        <div className='min-h-screen'></div>
+        {/* <div className='min-h-screen'></div>
+        <div className='min-h-screen'></div> */}
         <div className='block md:hidden min-h-screen'></div>
         <div className='block md:hidden min-h-screen'></div>
       </div>
