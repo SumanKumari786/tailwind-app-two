@@ -1,7 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 const Animate = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if the 'scroll' parameter exists in the URL
+    const urlParams = new URLSearchParams(location.search);
+    if (urlParams.has('scroll')) {
+      // Scroll to the bottom of the page
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [location.search]);
   // const [value1, setValue1] = useState(20);
   // const screenWidth = window.innerWidth;
   // useEffect(() => {

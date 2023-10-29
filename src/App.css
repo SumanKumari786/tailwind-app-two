@@ -16,7 +16,6 @@ html, body {
   src: url(/public/fonts/AvenirLight.ttf);
 }
 h1, h2, h3, h4, h5, h6, p, span{
-  /* font-family: 'Lora', serif; */
   font-family: 'SangBleuKingdomTrial';
 }
 
@@ -53,8 +52,6 @@ h1, h2, h3, h4, h5, h6, p, span{
   background-repeat: no-repeat !important;
   background-attachment: fixed;
   background-position: center center !important;
-  /* clip-path: circle(2500px at center); */
-  /* opacity: 0; */
   transition: clip-path 0.2s;
 }
 .expbg{
@@ -108,13 +105,13 @@ h1, h2, h3, h4, h5, h6, p, span{
   top: 0;
   left: 0;
   width: 100%;
-  background: url('/public/images/experiance-bg.jpg');
+  background: url('/public/images/exp.jpg');
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/images/exp.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-position: center center;
   clip-path: circle(1500px at center);
-  transition: 1s;
+  transition: 0.2s;
 }
 
 /* Seamless Connectivity Section  */
@@ -132,7 +129,12 @@ h1, h2, h3, h4, h5, h6, p, span{
     height: 200px;
   }
 }
-
+@media(max-width:767px){
+  .oppTextOne{
+    left:50%;
+    transform: translateX(-50%);
+  }
+}
 .zoomed-text {
   transform: scale(1) translate(0, 0);
   transition: transform 1s, opacity 2s;

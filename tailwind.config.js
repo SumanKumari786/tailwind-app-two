@@ -16,6 +16,7 @@ module.exports = {
         lg: '27pt',
         md: '24pt',
         sm: '18pt',
+        nm: '16pt',
         xs: '14pt',
       }
     },

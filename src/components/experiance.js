@@ -29,7 +29,7 @@ function Experiance() {
     // var hH = expSec.offsetHeight;
     // var wH = window.innerHeight || document.documentElement.clientHeight;
     var wS = window.scrollY;
-    if(wS>= hT){
+    if(wS>= hT-5){
       // setTimeout(() => {
         heroimgbg.style.display = 'none';
         text1.style.display = 'none';
@@ -37,8 +37,11 @@ function Experiance() {
         expContent.style.display = 'none';
         connSlider.style.opacity = 1;
         connSlider.classList.remove('hidden');
-        if(screenWidth >= 769){
+        if(screenWidth >= 1025){
           expbg.style.clipPath = `circle(${125.6}px at center center)`;
+        }
+        if((screenWidth < 1025) && (screenWidth > 767) ){
+          expbg.style.clipPath = `circle(${125.6}px at 83% center)`;
         }
         else{
           expbg.style.clipPath = `circle(${100}px at center 47.8%)`;

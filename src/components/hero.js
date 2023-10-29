@@ -95,7 +95,10 @@ export default function Hero() {
 
   return (
     <div className="bg-darkGreen z-50 heroSection">
-      <Header/>
+      <header className="fixed inset-x-0 top-0 z-50">
+        <Header/>
+      </header>
+      
         <div className="min-h-screen grid place-content-center contain">
           <div className="text-center heading zoomed-text" id='text'>
            {!document.cookie.includes('hasRun') && ( 
