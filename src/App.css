@@ -15,6 +15,10 @@ html, body {
   font-family: AvenirLight;
   src: url(/public/fonts/AvenirLight.ttf);
 }
+@font-face {
+  font-family: Avenir;
+  src: url(../public/fonts/Avenir.ttc);
+}
 h1, h2, h3, h4, h5, h6, p, span{
   font-family: 'SangBleuKingdomTrial';
 }
@@ -23,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p, span{
 .heading a, .exp-text-two, .expContent p, .item p{
   font-family: 'AvenirLight';
 }
-.scroll-area svg{fill:#fff !important;}
+.scroll-area svg{fill:#fff;}
 
 .slick-track{
     display: flex !important;
@@ -50,7 +54,7 @@ h1, h2, h3, h4, h5, h6, p, span{
   background: url('/public/images/hero.jpg');
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center center !important;
   transition: clip-path 0.2s;
 }
@@ -72,7 +76,7 @@ h1, h2, h3, h4, h5, h6, p, span{
   overflow-x: hidden;
 }
 .bg{
-  background: url('/public/images/experiance-bg.jpg');
+  background: url('/public/images/exp.jpg');
   background-size: cover;
   background-repeat: no-repeat !important;
   background-attachment: fixed;
@@ -86,8 +90,14 @@ h1, h2, h3, h4, h5, h6, p, span{
   animation-duration: 5s;
 }
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+    /* -webkit-transform: translateY(-40%); */
+  }
+  to {
+    opacity: 1;
+    /* -webkit-transform: translateY(-80%); */
+  }
 }
 .connSlider.hidden {
   display: none;
@@ -105,7 +115,7 @@ h1, h2, h3, h4, h5, h6, p, span{
   top: 0;
   left: 0;
   width: 100%;
-  background: url('/public/images/exp.jpg');
+  /* background: url('/public/images/exp.jpg'); */
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/images/exp.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -115,14 +125,26 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 
 /* Seamless Connectivity Section  */
-.seamSec{
-  clip-path: circle(1500px at center);
+.seamSec, .footer{
+  clip-path: circle(2560px at center);
+}
+/* scroller-places */
+.scroller-places::-webkit-scrollbar {
+  width: 6px;
+  border-right: 2px solid rgba(128, 128, 128, 0.592);
 }
 
+.scroller-places::-webkit-scrollbar-thumb {
+  background-color: #309b3b;
+}
 /* END OF CONNECTIVITY PAGE STYLE */
 
 /* .hidden-img{opacity:0;} */
-
+@media (min-width:1024px) and (max-width:1360px) {
+  .scroller-places {
+    zoom: 70%;
+  }
+}
 @media(max-width:769px){
   .connSlider .slick-slide img{
     width: 200px;

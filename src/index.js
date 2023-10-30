@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ConnectivityPage from "./pages/connectivityPage";
 import reportWebVitals from './reportWebVitals';
+import Campus from './pages/campus';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route exact path="/" element={<App/>} />
         <Route path="/connectivity" element={<ConnectivityPage/>} />
+        <Route path="/campus" element={<Campus />} />
       </Routes>
     </Router>
   </React.StrictMode>

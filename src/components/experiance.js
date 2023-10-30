@@ -40,18 +40,16 @@ function Experiance() {
         if(screenWidth >= 1025){
           expbg.style.clipPath = `circle(${125.6}px at center center)`;
         }
-        if((screenWidth < 1025) && (screenWidth > 767) ){
+        else if((screenWidth < 1025) && (screenWidth > 769) ){
           expbg.style.clipPath = `circle(${125.6}px at 83% center)`;
+        }
+        else if((screenWidth < 769) && (screenWidth > 767) ){
+          expbg.style.clipPath = `circle(${100}px at 83% 47%)`;
         }
         else{
           expbg.style.clipPath = `circle(${100}px at center 47.8%)`;
         }
       // }, 800);
-      // setTimeout(() => {
-      //   expbg.style.opacity = 0;
-      //   connImg.style.opacity = 1;
-      //   expbg.style.transition = '0s';
-      // }, 1500);
     }
     else{
       heroimgbg.style.display = 'block';
@@ -65,6 +63,16 @@ function Experiance() {
       expbg.style.transition = '1s';
       expbg.style.clipPath = `circle(${100}% at center center)`;
     }
+    if(screenWidth <= 1025){
+      if(wS >= hT){
+        setTimeout(() => {
+          expbg.style.opacity = 0;
+          connImg.style.opacity = 1;
+          expbg.style.transition = '0.1s';
+        }, 1800);
+      }
+    }
+    
 
     // if(wS>=(sliderHeight)){
     //   connSlider.classList.remove('hidden');
@@ -90,9 +98,9 @@ function Experiance() {
   return ( 
     <section className='expSec relative'>
       <div className='expbg'>
-        <div className='min-h-screen pb-[15%] md:pb-[180px] grid place-content-end expContent text-white text-center'>
+        <div className='min-h-screen pb-[50%] xl:pb-[200px] lg:pb-[40%] grid place-content-end expContent text-white text-center'>
             <h2 className='text-4xl md:text-6xl font-[500]'>Experience Ecoworld</h2>
-            <p className='w-11/12 lg:w-7/12 mx-auto mt-7 text-xs md:text-sm'>
+            <p className='w-11/12 lg:w-10/12 xl:w-7/12 mx-auto mt-7 text-xs md:text-sm'>
             Our placemaking capabilities integrate in a dynamic workplace environment with green open spaces
             and a native landscape to inspire innovation and creativity. The campus seamlessly blends into a
             live-work-play ecosystem with diverse options for connection, collaboration and post-work unwinding.

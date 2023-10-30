@@ -67,7 +67,7 @@ const Animate = () => {
         <div className="flex justify-between place-items-center column-area">
           <div className='content'>
             {/* <h2 className=' text-white exp-head fixed top-[25%] opacity-0 transition-[opacity] delay-100'>Ecoworld</h2> */}
-            <p className=' text-white text-xs md:text-sm text-center md:text-left exp-text-one fixed top-[25%] 2xl:top-[35%] xl:top-[30%] md:top-[40%] opacity-0 transition-[opacity] ease-in-out delay-100 w-[90%] 2xl:w-[18%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
+            <p className='text-white text-xs md:text-sm text-center md:text-left exp-text-one fixed top-[25%] 2xl:top-[35%] xl:top-[30%] md:top-[40%] opacity-0 transition-[opacity] ease-in-out delay-100 w-[90%] 2xl:w-[18%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
             Creating a world-class workplace experience, that continues to inspire you.
             </p>
           </div>

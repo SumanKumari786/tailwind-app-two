@@ -17,7 +17,7 @@ const Connectivity = () => {
       infinite: false,
       slidesToShow: 5,
       slidesToScroll: 1,
-      draggable: false,
+      // draggable: false,
       autoplay: false,
       speed: 2000,
       autoplaySpeed: 4000,
@@ -84,17 +84,21 @@ const Connectivity = () => {
             <p className="px-2 2xl:px-6">Working in harmony with nature</p>
           </div>
           <div className="item" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="280">
-            <img className='' src="/images/campus.png" alt="" />
-            <h4 className="mt-4 text-sm leading-10">The Campus</h4>
-            <p className="px-2 2xl:px-6">Where creativity flows</p>
+            <Link to="/campus" onClick={() => { window.scroll(0, 0);}}>
+              <img className='' src="/images/campus.png" alt="" />
+              <h4 className="mt-4 text-sm leading-10">The Campus</h4>
+              <p className="px-2 2xl:px-6">Where creativity flows</p>
+            </Link>
           </div>
          
           <div className="item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="280">
-            <a href="/connectivity">
+            <Link to="/connectivity" onClick={() => { window.scroll(0, 0);}}>
+            {/* <a href="/connectivity"> */}
               <img id='connImg' className='connImg lg:opacity-[0]' src="/images/connectivity.png" alt="" />
               <h4 className="mt-4 text-sm leading-10">Location Advantage</h4>
               <p className="px-2 2xl:px-6">Everything Is within your reach</p>
-            </a>
+            {/* </a> */}
+            </Link>
           </div>
           <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
             <img className='' src="/images/tech.png" alt="" />

@@ -53,7 +53,12 @@ export default function Hero() {
     var circle = circleStart - scrollPos;
     console.log(scrollPos, sectionHeight)
     if (scrollPos <= circleEnd) {
-      imgbg.style.clipPath = `circle(${circle}px at center)`;
+      if(screenWidth>767){
+        imgbg.style.clipPath = `circle(${circle}px at center)`;
+      }
+      else{
+        imgbg.style.clipPath = `circle(${circle}px at center 52%)`;
+      }
       text1.style.opacity = '0';
       text1.style.transition = '0.2s';
       text2.style.opacity = '0';
@@ -76,14 +81,16 @@ export default function Hero() {
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
         const targetX = centerX - letterIRect.left - letterIRect.width / 1.5;
-        const targetY = centerY - letterIRect.top - letterIRect.height / 2;
+        const targetY = centerY - letterIRect.top - letterIRect.height / 4;
+        // const targetY = centerY - letterIRect.top - letterIRect.height / 2;
 
         textElement.style.transform = `scale(${scale}) translate(${targetX}px, ${targetY}px)`;
         imgbg.style.opacity = opacity;
-        scale += 1.5;
+        // scale += 1.5;
+        scale += 1.2;
         opacity = opacity + 0.004;
         if (scale <= 290) {
-            setTimeout(zoomAndFadeText, 20); 
+            setTimeout(zoomAndFadeText, 15); 
         } else {
             textElement.style.opacity = '0';
             imgbg.style.opacity = 1;
