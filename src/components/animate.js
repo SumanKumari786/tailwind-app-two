@@ -67,12 +67,12 @@ const Animate = () => {
         <div className="flex justify-between place-items-center column-area">
           <div className='content'>
             {/* <h2 className=' text-white exp-head fixed top-[25%] opacity-0 transition-[opacity] delay-100'>Ecoworld</h2> */}
-            <p className='text-white text-xs md:text-sm text-center md:text-left exp-text-one fixed top-[25%] 2xl:top-[35%] xl:top-[30%] md:top-[40%] opacity-0 transition-[opacity] ease-in-out delay-100 w-[90%] 2xl:w-[18%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
+            <p className='text-white text-xs md:text-sm text-center md:text-left exp-text-one fixed top-[25%] 2xl:top-[35%] xl:top-[30%] md:top-[40%] opacity-0 w-[90%] 2xl:w-[18%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
             Creating a world-class workplace experience, that continues to inspire you.
             </p>
           </div>
           <div className='content self-center'>
-            <p className=' text-white text-xs md:text-sm text-center md:text-left ms-auto exp-text-two fixed top-[68%] xl:top-[50%] md:top-[55%] right-[2%] 2xl:right-[19%] xl:right-[9%]  md:right-[2%] opacity-0 transition-[opacity] ease-in-out delay-100 2xl:w-[18%] w-[90%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
+            <p className=' text-white text-xs md:text-sm text-center md:text-left ms-auto exp-text-two fixed top-[68%] xl:top-[50%] md:top-[55%] right-[2%] 2xl:right-[19%] xl:right-[9%]  md:right-[2%] opacity-0 2xl:w-[18%] w-[90%] xl:w-[23%] lg:w-[32%] md:w-[42%]'>
                  100% recycling and resume of water 85% occuupied spaces have views of the outdoors.
             </p>
           </div>

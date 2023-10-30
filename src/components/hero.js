@@ -9,8 +9,8 @@ export default function Hero() {
     var section = document.querySelector('.section');
     const text1 = document.querySelector('.exp-text-one');
     const text2 = document.querySelector('.exp-text-two');
-    text1.style.opacity = '0';
-    text2.style.opacity = '0';
+    // text1.style.opacity = '0';
+    // text2.style.opacity = '0';
     var sectionHeight = section.offsetTop;
     var circleEnd, circleStart;
     if(screenWidth>=1920){
@@ -53,20 +53,32 @@ export default function Hero() {
     var circle = circleStart - scrollPos;
     console.log(scrollPos, sectionHeight)
     if (scrollPos <= circleEnd) {
+      console.log(scrollPos, circleEnd);
       if(screenWidth>767){
         imgbg.style.clipPath = `circle(${circle}px at center)`;
       }
       else{
         imgbg.style.clipPath = `circle(${circle}px at center 52%)`;
       }
-      text1.style.opacity = '0';
-      text1.style.transition = '0.2s';
-      text2.style.opacity = '0';
-      text2.style.transition = '5s';
+      // text1.style.opacity = '0';
+      // text1.style.transition = '0.2s';
+      // text1.style.transform = 'translateY(-40%)';
+      text1.classList.remove('optAnimate');
+      text2.classList.remove('optAnimateTwo');
+      setTimeout(function() {
+        text2.classList.remove("opAnimateTwo");
+      }, 20);
+      // text2.style.opacity = '0';
+      // text2.style.transition = '0.2s';
     }
     else{
-      text1.style.opacity = '1';
-      text2.style.opacity = '1';
+      // text1.style.opacity = '1';
+      text1.classList.add('optAnimate');
+      text2.classList.add('optAnimateTwo');
+      setTimeout(function() {
+        text2.classList.add("opAnimateTwo");
+      }, 1000);
+      // text2.style.opacity = '1';
     }
   })
   let scale = 1;

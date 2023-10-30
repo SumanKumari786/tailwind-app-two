@@ -43,6 +43,41 @@ h1, h2, h3, h4, h5, h6, p, span{
   max-width:unset;
   margin: auto;
 }
+.optAnimate{
+  opacity: 1;
+  top:35%;
+  transition: opacity 0.5, transform 0.5s;
+  animation: fadeslideUp 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@keyframes fadeslideUp {
+  0% {
+    transform: translateY(65%);
+  }
+  2% {
+    transform: translateY(35%);
+  }
+}
+.optAnimateTwo.opAnimateTwo{
+  opacity:1;
+}
+.optAnimateTwo{
+  top:50%;
+  animation-delay: 1s !important;
+  transition: opacity 0.8, transform 0.8s;
+  animation: fadeslideUpTwo 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@keyframes fadeslideUpTwo {
+  0% {
+    opacity: 1;
+    transform: translateY(55%);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(50%);
+  }
+}
 /* End Home Style */
 
 .imgbg, .heroimgbg, .expbg {
