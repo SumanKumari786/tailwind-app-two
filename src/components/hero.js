@@ -63,7 +63,7 @@ export default function Hero() {
       circleStart = 820;
       dopct = 700;
     }
-    else if((screenWidth<321)){
+    else if((screenWidth<=321)){
       circleEnd = 700;
       circleStart = 820;
       dopct = 900;

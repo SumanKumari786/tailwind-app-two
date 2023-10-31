@@ -25,8 +25,15 @@ function Experiance() {
     else{
       sliderHeight = sliderHeight-100;
     }
+    var sScroll;
+    if(screenWidth > 376){
+      sScroll = 120;
+    }
+    else{
+      sScroll = 80;
+    }
     var wS = window.scrollY;
-    if(wS> hT+120){
+    if(wS> hT+sScroll){
       // setTimeout(() => {
         heroimgbg.style.display = 'none';
         text1.style.display = 'none';
