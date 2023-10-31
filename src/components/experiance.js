@@ -14,22 +14,19 @@ function Experiance() {
     const connImg = document.querySelector('.connImg');
     var hT = expSec.offsetTop;
     var sliderHeight = slideSection.offsetTop;
+    var sliderH = slideSection.offsetHeight;
     connImg.style.opacity = 0;
     // if(screenWidth >= 1680){
     //   hT=hT-120;
     // }
     if(screenWidth >= 1200){
       sliderHeight = sliderHeight-10;
-      // sliderRound = sliderHeight-25;
     }
     else{
       sliderHeight = sliderHeight-100;
-      // sliderRound = sliderHeight-105;
     }
-    // var hH = expSec.offsetHeight;
-    // var wH = window.innerHeight || document.documentElement.clientHeight;
     var wS = window.scrollY;
-    if(wS>= hT-5){
+    if(wS> hT+120){
       // setTimeout(() => {
         heroimgbg.style.display = 'none';
         text1.style.display = 'none';
@@ -38,16 +35,16 @@ function Experiance() {
         connSlider.style.opacity = 1;
         connSlider.classList.remove('hidden');
         if(screenWidth >= 1025){
-          expbg.style.clipPath = `circle(${125.6}px at center center)`;
+          expbg.style.clipPath = `circle(${125}px at center 59.2%)`;
         }
         else if((screenWidth < 1025) && (screenWidth > 769) ){
-          expbg.style.clipPath = `circle(${125.6}px at 83% center)`;
+          expbg.style.clipPath = `circle(${125.6}px at 83% 58.8%)`;
         }
         else if((screenWidth < 769) && (screenWidth > 767) ){
-          expbg.style.clipPath = `circle(${100}px at 83% 47%)`;
+          expbg.style.clipPath = `circle(${100}px at 83% 58.8%)`;
         }
         else{
-          expbg.style.clipPath = `circle(${100}px at center 47.8%)`;
+          expbg.style.clipPath = `circle(${100}px at center 56%)`;
         }
       // }, 800);
     }
@@ -63,42 +60,34 @@ function Experiance() {
       expbg.style.transition = '1s';
       expbg.style.clipPath = `circle(${100}% at center center)`;
     }
-    if(screenWidth <= 1025){
-      if(wS >= hT){
-        setTimeout(() => {
-          expbg.style.opacity = 0;
-          connImg.style.opacity = 1;
-          expbg.style.transition = '0.1s';
-        }, 1800);
-      }
-    }
-    
+    const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
 
-    // if(wS>=(sliderHeight)){
-    //   connSlider.classList.remove('hidden');
-    //   if(screenWidth >= 769){
-    //     expbg.style.clipPath = `circle(${125.4}px at center 48%)`;
-    //   }
-    //   else{
-    //     expbg.style.clipPath = `circle(${100}px at center 48%)`;
-    //   }
-    //   setTimeout(() => {
-    //     expbg.style.opacity = 0;
-    //     expbg.style.transition = '2.2s';
-    //   }, 1500);
-    // }
-    // else{
-    //   expbg.style.opacity = 1;
-    //   expbg.style.transition = '1s';
-    //   connSlider.classList.add('hidden');
-    //   expbg.style.clipPath = `circle(${100}% at center)`;
+    if (bottom) {
+      setTimeout(() => {
+        expbg.style.opacity = 0;
+        connImg.style.opacity = 1;
+        expbg.style.transition = '0.1s';
+      }, 1800);
+    }
+    else{
+      expbg.style.opacity = 1;
+      connImg.style.opacity = 0;
+    }
+    // if(screenWidth <= 1025){
+      // if(wS >= sliderH){
+      //   setTimeout(() => {
+      //     expbg.style.opacity = 0;
+      //     connImg.style.opacity = 1;
+      //     expbg.style.transition = '0.1s';
+      //   }, 1800);
+      // }
     // }
   })
 
   return ( 
     <section className='expSec relative'>
       <div className='expbg'>
-        <div className='min-h-screen pb-[50%] xl:pb-[200px] lg:pb-[40%] grid place-content-end expContent text-white text-center'>
+        <div className='min-h-screen pb-[0%] 2xl:pb-[120px] xl:pb-[0px] lg:pb-[0%] grid place-content-end expContent text-white text-center'>
             <h2 className='text-4xl md:text-6xl font-[500]'>Experience Ecoworld</h2>
             <p className='w-11/12 lg:w-10/12 xl:w-7/12 mx-auto mt-7 text-xs md:text-sm'>
             Our placemaking capabilities integrate in a dynamic workplace environment with green open spaces

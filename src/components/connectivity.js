@@ -76,7 +76,7 @@ const Connectivity = () => {
     return (
       <div className="slideSection text-center text-white z-50 min-h-screen relative mt-[-100vh]" id='connectivity'>
         {/* <div className="bg"></div> */}
-        <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}} onClick={handleClick}>
+        <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}}>
         <Slider className="connSlider xl:pt-6 lg:pt-[0.65rem] mt-[-5px] md:mt-[0]" {...settings}>
         <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
             <img className='' src="/images/wellness.png" alt="" />
@@ -105,12 +105,6 @@ const Connectivity = () => {
             <h4 className="mt-4 text-sm leading-10">Efficient Technology</h4>
             <p className="px-2 2xl:px-6">Intelligent building management</p>
           </div>
-         
-          {/* <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
-            <img className='' src="/images/hero.jpg" alt="" />
-            <h4 className="mt-4 text-sm leading-10">The Campus</h4>
-            <p className="px-2 2xl:px-6">Where creativity flows</p>
-          </div> */}
           <div className="item" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="280">
             <img className='hidden-img' src="/images/inspiration.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Inspirational Spaces</h4>

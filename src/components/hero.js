@@ -7,62 +7,85 @@ export default function Hero() {
   window.addEventListener('scroll', function() {
     var imgbg = document.querySelector('.heroimgbg');
     var section = document.querySelector('.section');
+    var secOpc = document.querySelector('.expSec');
     const text1 = document.querySelector('.exp-text-one');
     const text2 = document.querySelector('.exp-text-two');
-    // text1.style.opacity = '0';
-    // text2.style.opacity = '0';
     var sectionHeight = section.offsetTop;
-    var circleEnd, circleStart;
+    var sectionH = secOpc.offsetHeight;
+    var circleEnd, circleStart, dopct;
     if(screenWidth>=1920){
       circleEnd = 920;
       circleStart = 1150;
+      dopct = 1000;
     }
     else if((screenWidth<1920) && (screenWidth>=1680)){
       circleEnd = 800;
       circleStart = 1000;
+      dopct = 1000;
     }
     else if((screenWidth<1680) && (screenWidth>=1440)){
       circleEnd = 620;
       circleStart = 850;
+      dopct = 1000;
     }
     else if((screenWidth<1440) && (screenWidth>=1280)){
       circleEnd = 600;
       circleStart = 800;
+      dopct = 800;
     }
-    else if((screenWidth<1280) && (screenWidth>=1024)){
+    else if((screenWidth<1280) && (screenWidth>1024)){
       circleEnd = 600;
       circleStart = 850;
+      dopct = 800;
     }
-    else if((screenWidth<1024) && (screenWidth>=768)){
-      circleEnd = 650;
-      circleStart = 820;
+    else if((screenWidth<=1024) && (screenWidth>992)){
+      circleEnd = 600;
+      circleStart = 950;
+      dopct = 900;
     }
-    else if((screenWidth<768) && (screenWidth>=540)){
+    else if((screenWidth<=992) && (screenWidth>=768)){
+      circleEnd = 700;
+      circleStart = 950;
+      dopct = 800;
+    }
+    else if((screenWidth<768) && (screenWidth>540)){
       circleEnd = 730;
       circleStart = 820;
+      dopct = 700;
     }
-    else if((screenWidth<540) && (screenWidth>321)){
-      circleEnd = 730;
+    else if((screenWidth<=540) && (screenWidth>400)){
+      circleEnd = 660;
       circleStart = 820;
+      dopct = 700;
+    }
+    else if((screenWidth<=400) && (screenWidth>321)){
+      circleEnd = 680;
+      circleStart = 820;
+      dopct = 700;
+    }
+    else if((screenWidth<321)){
+      circleEnd = 700;
+      circleStart = 820;
+      dopct = 900;
     }
     else{
       circleEnd = 630;
       circleStart = 700;
+      dopct = 700;
     }
     var scrollPos = window.scrollY;
     var circle = circleStart - scrollPos;
-    console.log(scrollPos, sectionHeight)
+    // console.log(scrollPos, sectionHeight)
     if (scrollPos <= circleEnd) {
-      console.log(scrollPos, circleEnd);
-      if(screenWidth>767){
+      // console.log(scrollPos, circleEnd);
+      if(screenWidth>1100){
         imgbg.style.clipPath = `circle(${circle}px at center)`;
       }
       else{
-        imgbg.style.clipPath = `circle(${circle}px at center 52%)`;
+        imgbg.style.clipPath = `circle(${circle}px at center 40%)`;
       }
       // text1.style.opacity = '0';
       // text1.style.transition = '0.2s';
-      // text1.style.transform = 'translateY(-40%)';
       text1.classList.remove('optAnimate');
       text2.classList.remove('optAnimateTwo');
       setTimeout(function() {
@@ -80,6 +103,12 @@ export default function Hero() {
       }, 1000);
       // text2.style.opacity = '1';
     }
+    if ((scrollPos > (sectionH + dopct))) {
+      section.style.opacity = 0.1;
+    }
+    else{
+      section.style.opacity = 1;
+    }
   })
   let scale = 1;
   let opacity = 0;
@@ -93,15 +122,16 @@ export default function Hero() {
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
         const targetX = centerX - letterIRect.left - letterIRect.width / 1.5;
-        const targetY = centerY - letterIRect.top - letterIRect.height / 4;
+        const targetY = centerY - letterIRect.top - letterIRect.height / 1.8;
         // const targetY = centerY - letterIRect.top - letterIRect.height / 2;
 
         textElement.style.transform = `scale(${scale}) translate(${targetX}px, ${targetY}px)`;
         imgbg.style.opacity = opacity;
         // scale += 1.5;
-        scale += 1.2;
+        scale += 0.8;
         opacity = opacity + 0.004;
-        if (scale <= 290) {
+        // if (scale <= 290) {
+        if (scale <= 290){
             setTimeout(zoomAndFadeText, 15); 
         } else {
             textElement.style.opacity = '0';
