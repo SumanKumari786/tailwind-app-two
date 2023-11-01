@@ -78,12 +78,12 @@ const Connectivity = () => {
         {/* <div className="bg"></div> */}
         <div className="absolute top-[50%] translate-y-[-40%] h-fit" style={{width: "100%"}}>
         <Slider className="connSlider xl:pt-6 lg:pt-[0.65rem] mt-[-5px] md:mt-[0]" {...settings}>
-        <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
+        <div className="item" >
             <img className='' src="/images/wellness.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Sustainability & Wellness</h4>
             <p className="px-2 2xl:px-6">Working in harmony with nature</p>
           </div>
-          <div className="item" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="280">
+          <div className="item" >
             <Link to="/campus" onClick={() => { window.scroll(0, 0);}}>
               <img className='' src="/images/campus.png" alt="" />
               <h4 className="mt-4 text-sm leading-10">The Campus</h4>
@@ -91,21 +91,21 @@ const Connectivity = () => {
             </Link>
           </div>
          
-          <div className="item" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="280">
+          <div className="item" >
             <Link to="/connectivity" onClick={() => { window.scroll(0, 0);}}>
             {/* <a href="/connectivity"> */}
-              <img id='connImg' className='connImg lg:opacity-[0]' src="/images/connectivity.png" alt="" />
+              <img id='connImg' className='connImg ' src="/images/connectivity.png" alt="" />
               <h4 className="mt-4 text-sm leading-10">Location Advantage</h4>
               <p className="px-2 2xl:px-6">Everything Is within your reach</p>
             {/* </a> */}
             </Link>
           </div>
-          <div className="item" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="280">
+          <div className="item" >
             <img className='' src="/images/tech.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Efficient Technology</h4>
             <p className="px-2 2xl:px-6">Intelligent building management</p>
           </div>
-          <div className="item" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="280">
+          <div className="item" >
             <img className='hidden-img' src="/images/inspiration.png" alt="" />
             <h4 className="mt-4 text-sm leading-10">Inspirational Spaces</h4>
             <p className="px-2 2xl:px-6">Rejuvenate your senses</p>

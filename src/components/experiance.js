@@ -15,7 +15,7 @@ function Experiance() {
     var hT = expSec.offsetTop;
     var sliderHeight = slideSection.offsetTop;
     var sliderH = slideSection.offsetHeight;
-    connImg.style.opacity = 0;
+    // connImg.style.opacity = 0;
     // if(screenWidth >= 1680){
     //   hT=hT-120;
     // }
@@ -42,7 +42,7 @@ function Experiance() {
         connSlider.style.opacity = 1;
         connSlider.classList.remove('hidden');
         if(screenWidth >= 1025){
-          expbg.style.clipPath = `circle(${125}px at center 59.2%)`;
+          expbg.style.clipPath = `circle(${0}px at center 59.2%)`;
         }
         else if((screenWidth < 1025) && (screenWidth > 769) ){
           expbg.style.clipPath = `circle(${125.6}px at 83% 58.8%)`;
@@ -61,42 +61,34 @@ function Experiance() {
       text2.style.display = 'block';
       expContent.style.display = 'grid';
       connSlider.classList.add('hidden');
-      connImg.style.opacity = 0;
+      // connImg.style.opacity = 0;
       // connSlider.style.opacity = 0;
       expbg.style.opacity = 1;
       expbg.style.transition = '1s';
       expbg.style.clipPath = `circle(${100}% at center center)`;
     }
-    const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
 
-    if (bottom) {
-      setTimeout(() => {
-        expbg.style.opacity = 0;
-        connImg.style.opacity = 1;
-        expbg.style.transition = '0.1s';
-      }, 1800);
-    }
-    else{
-      expbg.style.opacity = 1;
-      connImg.style.opacity = 0;
-    }
-    // if(screenWidth <= 1025){
-      // if(wS >= sliderH){
-      //   setTimeout(() => {
-      //     expbg.style.opacity = 0;
-      //     connImg.style.opacity = 1;
-      //     expbg.style.transition = '0.1s';
-      //   }, 1800);
-      // }
+    // For change image
+    // const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight
+    // if (bottom) {
+    //   setTimeout(() => {
+    //     expbg.style.opacity = 0;
+    //     connImg.style.opacity = 1;
+    //     expbg.style.transition = '0.1s';
+    //   }, 1800);
+    // }
+    // else{
+    //   expbg.style.opacity = 1;
+    //   connImg.style.opacity = 0;
     // }
   })
 
   return ( 
     <section className='expSec relative'>
       <div className='expbg'>
-        <div className='min-h-screen pb-[0%] 2xl:pb-[120px] xl:pb-[0px] lg:pb-[0%] grid place-content-end expContent text-white text-center'>
+        <div className='min-h-screen pb-[0%] 2xl:pb-[40px] xl:pb-[0px] lg:pb-[0%] grid place-content-end expContent text-white text-center'>
             <h2 className='text-4xl md:text-6xl font-[500]'>Experience Ecoworld</h2>
-            <p className='w-11/12 lg:w-10/12 xl:w-7/12 mx-auto mt-7 text-xs md:text-sm'>
+            <p className='w-[95%] 2xl:w-[70%] xl:w-[85%] mx-auto mt-7 text-xs md:text-sm'>
             Our placemaking capabilities integrate in a dynamic workplace environment with green open spaces
             and a native landscape to inspire innovation and creativity. The campus seamlessly blends into a
             live-work-play ecosystem with diverse options for connection, collaboration and post-work unwinding.
